@@ -4,7 +4,7 @@ import VSCode from '@/components/VSCode.vue'
 const install = `npm i chart.js`;
 const createComponente = `php artisan make:livewire ShowSharts`;
 
-const mount = `public $inventoryData = []; -> Eata varible tendra el total de los libros
+const mount = `public $inventoryData = []; -> Esta varible tendra el total de los libros
 public function mount()
     {
         $this->inventoryData = Libro::count(); -> Cuenta el total de libros
@@ -143,7 +143,7 @@ const fullCode = `<script>
 
             <p class="font-light font-roboto text-lg mt-10">
                 Ahora, para renderizar los datos de manera global, es decir, que esten dentro del state actual,
-                ocuparemos la función mount que que nos proporciona laravel por defecto
+                ocuparemos la función mount que nos proporciona laravel por defecto
             </p>
 
             <VSCode :code="mount" />
@@ -210,10 +210,8 @@ const fullCode = `<script>
 
             <VSCode :code="fullCode" />
 
-            <VSCode :code="env" />
-
             <p class="font-light font-roboto text-lg mt-10">
-                Es momento de llamar a nuestro componente en la vista Index, una vez llamado a nuestro compoenente la
+                Es momento de llamar a nuestro componente en la vista Index, una vez llamado a nuestro componente la
                 gráfica deberia mostrarse correctamente
             </p>
         </section>
