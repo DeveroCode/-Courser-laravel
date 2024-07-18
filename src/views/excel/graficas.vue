@@ -141,8 +141,6 @@ const fullCode = `<script>
                 libros existentes por día, para esto, nos apoyaremos por la variable $inventoryData.
             </p>
 
-            <VSCode :code="createComponente" />
-
             <p class="font-light font-roboto text-lg mt-10">
                 Ahora, para renderizar los datos de manera global, es decir, que esten dentro del state actual,
                 ocuparemos la función mount que que nos proporciona laravel por defecto
