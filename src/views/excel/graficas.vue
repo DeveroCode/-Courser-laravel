@@ -85,9 +85,9 @@ const fullCode = `<script>
                 sus conocimientos son lo suficientemente avanzados para lograrlo por si solo.</span>
         </div>
         <section class="pt-12">
-            <h1 class="text-3xl font-bold text-title font-roboto capitalize">Creando graficas con chart.js</h1>
-            <p class="font-light font-roboto text-lg mt-5">La vizulazación de datos es parte crucial de muchas
-                aplicaciones web modernas, ya que permiten a los usuarios comprender mejor la información a traves de
+            <h1 class="text-3xl font-bold text-title font-roboto capitalize">Creando gráficas con chart.js</h1>
+            <p class="font-light font-roboto text-lg mt-5">La visualización de datos es parte crucial de muchas
+                aplicaciones web modernas, ya que permiten a los usuarios comprender mejor la información a través de
                 sus graficos y diagramas. Para esto, <span class="font-bold">Chart.js</span> es una de las bibliotecas
                 de JavaScript más populares para crear y manipular graficos. Ahora, Como integramos Chart.js a Laravel?
             </p>
@@ -117,7 +117,7 @@ const fullCode = `<script>
             </div>
 
             <p class="font-light font-roboto text-lg mt-10">
-                Para renderizar nuestras graficas, optaremos por divirlo en un componente aparte, para esto, es
+                Para renderizar nuestras gráficas, optaremos por divirlo en un componente aparte, para esto, es
                 necesario que cada componente que vaya a renderizar datos sea llamado distinto, es decir, <span
                     class="font-bold">Aqui
                     creare el componenete ShowSharts.php</span> y ustedes crearan sus propios componentes.
@@ -126,7 +126,7 @@ const fullCode = `<script>
             <VSCode :code="createComponente" />
 
             <p class="font-light font-roboto text-lg mt-10">
-                Dentro de este compoennte configuraremos nuestras variables necesarias para renderizar las graficas.
+                Dentro de este componente configuraremos nuestras variables necesarias para renderizar las gráficas.
             </p>
 
         </section>
@@ -136,9 +136,9 @@ const fullCode = `<script>
             </div>
 
             <p class="font-light font-roboto text-lg mt-10">
-                Siguiendo con el ejemplos, la grafica que hemos creado la renderizaremos en la vista Index del dashboard
-                de nuestro Bibliotecarios, por lo tanto, la información que requiero que se renderice seria el total de
-                libros existentes por día, para esto, nos apollaremos por la variable $inventoryData.
+                Siguiendo con el ejemplo, la gráfica que hemos creado la renderizaremos en la vista Index del dashboard
+                de nuestro Bibliotecario, por lo tanto, la información que requiero que se renderice seria el total de
+                libros existentes por día, para esto, nos apoyaremos por la variable $inventoryData.
             </p>
 
             <VSCode :code="createComponente" />
@@ -155,17 +155,17 @@ const fullCode = `<script>
             <p class="font-roboto text-lg text-red-900 font-bold">Advertencia!
             </p>
             <span class="font-roboto text-lg text-red-700">Sera necesario crear mas varibales de acuerdo a sus
-                necesidades, como ejemplo, solo optaremos por una sola variable</span>
+                necesidades.Como ejemplo, solo optaremos por una sola variable</span>
         </div>
 
         <section class="pt-12">
             <div class="py-5 border-b border-gray-200">
-                <h4 class="text-title font-bold font-roboto text-2xl">Renderizando la grafica</h4>
+                <h4 class="text-title font-bold font-roboto text-2xl">Renderizando la gráfica</h4>
             </div>
 
             <p class="font-light font-roboto text-lg mt-10">
                 Dentro de la vista de nuestro componente, crearemos un canvas básico y con el estilo que prefieran,
-                también pueden copiar el siguiente código para renderizar la grafica, no hay problema.
+                también pueden copiar el siguiente código para renderizar la gráfica, no hay problema.
             </p>
 
             <VSCode :code="canvas" />
@@ -176,8 +176,8 @@ const fullCode = `<script>
                     JavaScript</span>
             </p>
             <p class="font-light font-roboto text-lg mt-10">
-                Continuemos, utilizandoa la etique script en nuestra vista, agregaremos un evento para renderizar la
-                grafica una vez que nuestro componente de laravel este listo, es decir, que todos los datos necesarios
+                Continuemos, utilizando la etiqueta script en nuestra vista, agregaremos un evento para renderizar la
+                gráfica una vez que nuestro componente de laravel este listo, es decir, que todos los datos necesarios
                 esten cargados.
             </p>
 
@@ -188,7 +188,7 @@ const fullCode = `<script>
                 renderizar. Antes de esto, crearemos dos variables, una llamada <span class="font-bold">inventoryData y
                     ctx</span>. inventoryData tendra el total de los libros que viene de nuestro componente, es decir,
                 obtendra los datos en un formato JSON y los almacenara en la varibale inventoryData que esta en nuestra
-                vista. En cambio, la variable ctx, nos ayudará a renderizar la grafica.
+                vista. En cambio, la variable ctx, nos ayudará a renderizar la gráfica.
             </p>
 
             <VSCode :code="env" />
@@ -206,31 +206,17 @@ const fullCode = `<script>
             </p>
 
             <VSCode :code="newChart" />
-
-            <p class="font-light font-roboto text-lg mt-10">
-                Una vez teniendo nuestro canvas, sera necesario aplicar JavaScript y Manejo del DOM, <span
-                    class="font-bold">en caso de no saber que es el DOM, es preferible tomar un curso de
-                    JavaScript</span>
-            </p>
             <p class="font-light font-roboto text-lg mt-10">
                 Si todo esta configurado correctamente, el codigó deberá verse de la siguiente manera
             </p>
 
             <VSCode :code="fullCode" />
 
-            <p class="font-light font-roboto text-lg mt-10">
-                Cargado todo y listo para mostrarse, utilizaremos un callback para llamar a nuestras funciones a
-                renderizar. Antes de esto, crearemos dos variables, una llamada <span class="font-bold">inventoryData y
-                    ctx</span>. inventoryData tendra el total de los libros que viene de nuestro componente, es decir,
-                obtendra los datos en un formato JSON y los almacenara en la varibale inventoryData que esta en nuestra
-                vista. En cambio, la variable ctx, nos ayudará a renderizar la grafica.
-            </p>
-
             <VSCode :code="env" />
 
             <p class="font-light font-roboto text-lg mt-10">
                 Es momento de llamar a nuestro componente en la vista Index, una vez llamado a nuestro compoenente la
-                grafica deberia mostrarse correctamente
+                gráfica deberia mostrarse correctamente
             </p>
         </section>
 

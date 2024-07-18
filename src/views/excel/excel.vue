@@ -76,10 +76,10 @@ const calling = `<div class=" col-span-12 md:col-span-6">
             <h1 class="text-3xl font-bold text-title font-roboto capitalize">Exportación de datos - Excel</h1>
             <p class="font-light font-roboto text-lg mt-10">
                 Exportar datos a formatos como Excel es una funcionalidad muy común y útil en muchas aplicaciones.
-                Laravel, nos permite exportar datos de una base de datos a un archivo Excel de na manera sencilla y sin
-                complicacion gracias a la combinacion de la biblioteca <span
+                Laravel, nos permite exportar datos de una base de datos a un archivo Excel de una manera sencilla y sin
+                complicacion gracias a la combinación de la biblioteca <span
                     class="font-bold">Maatwebsite/Laravel-Excel</span>.
-                Esta bibliotea proporciona una API sencilla y potente para generar y manipular archivos en excel
+                Esta biblioteca proporciona una API sencilla y potente para generar y manipular archivos en excel
                 directamente desde tu aplicación Laravel.
             </p>
         </section>
@@ -87,7 +87,7 @@ const calling = `<div class=" col-span-12 md:col-span-6">
         <div class="py-12 border-l-8 border-red-800 bg-red-200 px-5">
             <p class="text-lg font-light font-roboto text-red-600">
                 <span class="font-bold text-xl">Advertencia!</span>.
-                En esta seccion de la documentación, no se tocara el tema de los estilos de la hoja de calculo de excel.
+                En esta sección de la documentación, no se tocara el tema de los estilos de la hoja de calculo de excel.
             </p>
         </div>
 
@@ -106,7 +106,8 @@ const calling = `<div class=" col-span-12 md:col-span-6">
                 laravel
             </p>
             <p class="font-light font-roboto text-lg mt-10">
-                Para crear nuestro export, utilizaremos la directiva es necesario crear un nuevo metodo llamado
+                Para crear nuestro export, utilizaremos la directiva make:export. Es necesario crear un nuevo metodo
+                llamado
                 AlumnosExport, este se vinculara con el modelo de alumnos.
             </p>
 
@@ -145,7 +146,7 @@ const calling = `<div class=" col-span-12 md:col-span-6">
                 </p>
             </div>
             <p class="font-light font-roboto text-lg mt-10">Cada uno de los encabezados pueden ser modificados si es
-                necesario, recuerde que cada encabezado debera tener concordancia con el encabezado de nuestra tabla de
+                necesario, recuerde que cada encabezado deberá tener concordancia con el encabezado de nuestra tabla de
                 base de datos.
             </p>
         </section>
@@ -173,7 +174,8 @@ const calling = `<div class=" col-span-12 md:col-span-6">
             </div>
 
             <p class="font-light font-roboto text-lg mt-10">Es momento de importar esta funcion o llamar a esta función
-                en nuestra vista, para esto nosotros utilizaremos un wire:click y llamaremos a nuestra función.Si todo
+                en nuestra vista, para esto nosotros utilizaremos un wire:click y llamaremos a nuestra función en el
+                dashboard del super Admin. Si todo
                 salio correctamente, tendremos una archivo llamado Alumnos.xlsx que podremos descargar.
             </p>
 
