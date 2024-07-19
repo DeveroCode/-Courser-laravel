@@ -11,8 +11,9 @@ import { RouterLink } from 'vue-router';
         </RouterLink>
 
         <div class="space-x-10">
-            <RouterLink to="/introduction" class="font-roboto text-para text-lg font-bold">Guía</RouterLink>
-            <RouterLink to="/introduction" class="font-roboto text-para text-lg font-bold">Curso Youtube</RouterLink>
+            <RouterLink to="{ name: 'start' }" class="font-roboto text-para text-lg font-bold">Guía</RouterLink>
+            <RouterLink to="{ name: 'start' }" class="font-roboto text-para text-lg font-bold">Curso Youtube
+            </RouterLink>
         </div>
     </header>
 </template>
