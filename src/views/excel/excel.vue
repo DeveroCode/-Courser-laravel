@@ -22,7 +22,7 @@ class AlumnosExport implements FromCollection
 
     public function headings(): array
     {
-        // Encabezados de la tabla
+        // Encabezados de la tabla, por defecto vienen con los nombres de las columnas de la db
     }
 }
 `;
@@ -142,7 +142,9 @@ const calling = `<div class=" col-span-12 md:col-span-6">
             <div class="py-12 border-l-8 border-red-800 bg-red-200 px-5">
                 <p class="text-lg font-light font-roboto text-red-600">
                     <span class="font-bold text-xl">Advertencia!</span>.
-                    Si laravel te ah creado esta función junto con los encabezados, puedes saltarte esta parte
+                    Si laravel te ah creado esta función junto con los encabezados, puedes saltarte esta parte, en caso
+                    de ser necesario colocar o modificar el nombre de los encabezados,
+                    estos se modificaran dentro del return de la function headings.
                 </p>
             </div>
             <p class="font-light font-roboto text-lg mt-10">Cada uno de los encabezados pueden ser modificados si es
