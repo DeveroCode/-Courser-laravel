@@ -68,6 +68,10 @@ import Drodown from './Dropdown.vue';
                     class="font-roboto block text-para  font-light border-l-4 px-7 py-3">
                     <p class="text-md">Graficas</p>
                 </RouterLink>
+                <RouterLink :to="{ name: 'validacion' }"
+                    class="font-roboto block text-para  font-light border-l-4 px-7 py-3">
+                    <p class="text-md">Validación</p>
+                </RouterLink>
             </Drodown>
         </nav>
     </aside>

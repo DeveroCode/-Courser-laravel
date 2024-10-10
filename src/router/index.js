@@ -105,6 +105,11 @@ const router = createRouter({
           path: "graficas",
           name: "graficas",
           component: () => import("@/views/excel/graficas.vue")
+        },
+        {
+          path: "/validacion",
+          name: "validacion",
+          component: () => import("@/views/ValidacionView.vue")
         }
       ]
     },
