@@ -17,7 +17,7 @@ const searchLoans = `public function render(){
     }
 }`;
 
-const read = ` public function leerStatus($found, $message)
+const read = ` public function leerStatus($found, $message) => Ejemplo de como quedará la funcion en el componente hijo
     {
         $this->found = $found;
         $this->message = $message;
@@ -79,11 +79,13 @@ const showAlert = `function showAlerts(){
                 variable que retorna true o false.
             </p>
             <p class="font-light font-roboto text-lg mt-10">
-                Para crear esto es necesario encontrar el controlador padre que renderice ambos componentes, es decir,
-                que renderice nuestro formulario y los resultados. Tomemos como ejemplo <span class="font-bold">View
-                    Loans</span> el cual es encargado de renderizar tanto el formulario de busqueda como el formulario
-                de resultados.
+                Para implementar esto, necesitamos identificar el controlador principal que gestione la visualización de
+                ambos componentes: el formulario de búsqueda y los resultados. Un ejemplo de esto es <span
+                    class="font-bold">View Loans</span>, que se encarga de mostrar tanto el formulario de búsqueda como
+                los resultados.
             </p>
+
+
 
             <VSCode :code="view" />
         </section>
@@ -93,8 +95,8 @@ const showAlert = `function showAlerts(){
             </div>
 
             <p class="font-light font-roboto text-lg mt-10">
-                Una vez que hayamos identificado nuestro componente padre, será necesario ingresar en su clase. Dentro
-                de esta clase, crearemos una nueva variable llamada <span class="font-bold">$found</span>.
+                Dentro del componente hijo accederemos a su clase. Dentro de esa clase,
+                crearemos una nueva variable llamada <span class="font-bold">$found</span>.
             </p>
 
             <VSCode :code="found" />
@@ -129,16 +131,20 @@ const showAlert = `function showAlerts(){
             </div>
 
             <p class="font-light font-roboto text-lg mt-10">
-                Dentro de la clases del componente hijo sera necesario obtener el emit, para est vamosa crear una
-                funcion llamada <span class="font-bold">leerStatus</span>
+                Ahora, dentro de la clase del componente hijo, necesitaremos capturar el evento emitido junto con la
+                variable <span class="font-bold">$found</span>. Para lograr esto, será necesario crear una nueva función
+                en el componente hijo, la cual estará vinculada con el componente padre mediante el uso de
+                <em>emit</em>, permitiendo la comunicación entre ambos componentes.
             </p>
+
+
 
             <VSCode :code="read" />
 
             <div class="py-12 border-l-8 border-red-800 bg-red-200 px-5">
                 <p class="text-lg font-light font-roboto text-red-600">
                     <span class="font-bold text-xl">Advertencia!</span>.
-                    Ustedes deberan configurar los listners y sus variables para los emits que se crearon en el
+                    Ustedes deberan configurar los listeners y sus variables para los emits que se crearon en el
                     componente padre.
                 </p>
             </div>
