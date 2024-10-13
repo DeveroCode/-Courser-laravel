@@ -95,7 +95,7 @@ const showAlert = `function showAlerts(){
             </div>
 
             <p class="font-light font-roboto text-lg mt-10">
-                Dentro del componente hijo accederemos a su clase. Dentro de esa clase,
+                Dentro del componente padre accederemos a su clase. Dentro de esa clase,
                 crearemos una nueva variable llamada <span class="font-bold">$found</span>.
             </p>
 
